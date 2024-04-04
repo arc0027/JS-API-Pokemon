@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokeapi</title>
+    <script src="index.js" defer></script>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Formulario para buscar un pokemon. -->
+    <h1>POKEAPI</h1>
+    <form action="" onsubmit="obtenerPokemon(event)">
+    <input type="text" name="pokemon">
+       <img src="img/buscador.png" width="25px" height="25px">
+    </form>
+
+    <!-- Carta con el pokemon introducido por parametro -->
+    <div cartaPokemon class="cartaPokemon">
+      <div nombrePokemon></div>
+      <div contenedorImagen class="contenedorImagen">
+        <img imagenPokemon class="imagenPokemon" src="img/pikachu.png" />
+      </div>
+      <div idPokemon></div>
+      <div tiposPokemon class="tiposPokemon"></div>
+      <div habilidadPokemon class="habilidadPokemon"></div>
+      <div statsPokemon class="statsPokemon"></div>
+    </div>
+
+    <!-- Lista de pokemon -->
+    <div class="lista">
+        <h3>Lista pokemon</h3>
+        <button onclick="lista_pokemon()">Mostrar</button>
+        <ol id="lista_pokemon">
+        </ol>
+    </div>
+  </body>
+</html>
